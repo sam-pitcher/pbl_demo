@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script>
+$(function() {
+	// Sidebar toggle behavior
+	$('#sidebarCollapse').on('click', function() {
+	  $('#sidebar, #content').toggleClass('active');
+	});
+  });
+  </script>
+  
+  <!-- Page content holder -->
+  <div class="page-content p-5" id="content">
+	<!-- Toggle button -->
+	<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">|||</small></button>
+  
+	<!-- Demo content -->
+	<h2 class="display-4">PBL Demo Application</h2>
+	<div class="separator"></div>
+	<div class="row text-dark">
+		<div class="col-sm">
+			<h5 class="text-center">Private Embed</h5><br>
+			<p>
+			You can also embed Looks, Explores, and dashboards privately, so that a Looker login is required. If a user is not authenticated you have the option to show an error message, or to display a login screen.
+			<br><br>
+			Users who are logged in and accessing privately embedded content are subject to the settings in the Sessions admin panel that determine how long they can stay logged in, whether they can log in from multiple browsers, or whether they are logged out due to inactivity.
+			<br><br>
+			If you require a more advanced or customizable embedded solution check out our single sign-on embedding page.
+			<br><br>
+			<a href="https://docs.looker.com/sharing-and-publishing/embedding" target="_blank">
+				<button type="button" class="btn btn-secondary">Private Embed Docs</button>
+			</a>
+			</p>
+		</div>
+	</div>
+  
+  </div>
+  <!-- End demo content -->
+  
+  {% endblock %}
